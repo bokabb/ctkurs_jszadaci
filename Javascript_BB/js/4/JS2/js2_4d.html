@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Svi brojevi koji se zavrsavaju na 2, 4 ili 5</title>
+</head>
+
+<body>
+    <div id="brojeviNa"></div>
+
+    <script>
+
+        //Napišite pomoću for petlje sve brojeve koji se završavaju na 2, 4 ili 5
+
+    
+            var brojac1 = 2;
+            var brojac2 = 4;
+            var brojac3 = 5;
+
+            for (var i = 1; i <= 100; i++) {
+                
+
+                if (brojac1 <= 100 && brojac2 <= 100 && brojac3 <= 100) {
+
+                     document.getElementById("brojeviNa").innerHTML +=  brojac1 + " - " + brojac2 + " - " + brojac3 + "<br>";
+
+                   //console.log(brojac1, brojac2, brojac3);
+
+                }
+                brojac1 += 10;
+                brojac2 += 10;
+                brojac3 += 10;
+
+            }
+
+     
+
+
+       
+           //ili
+           function zavrsniBrojevi(from, to, poslednjiBroj) {
+            var brojevi = [];
+            for (from; from <= to; from++) {
+                var broj = from.toString();
+                if (broj.charAt(broj.length - 1) == poslednjiBroj) {
+                    brojevi.push(broj);
+                }
+            }
+            return console.log(brojevi);
+        }
+        zavrsniBrojevi(0, 100, 2);
+        zavrsniBrojevi(0, 100, 4);
+        zavrsniBrojevi(0, 100, 5); 
+
+    </script>
+
+
+</body>
+
+</html>

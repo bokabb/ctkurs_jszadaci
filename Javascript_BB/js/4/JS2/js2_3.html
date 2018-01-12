@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Napišite program koji vraća random broj između 0 i 100 i ako je broj manji od 20 ispisuje "mali", ako je broj veći od 90 ispisuje "veliki", a u ostalim slučajevima ispisuje "srednji"
+        
+        function randomNumber() {
+            var nasumicanBroj = Math.floor(Math.random() * 100);
+            if (nasumicanBroj < 20) {
+                return nasumicanBroj + " - mali";
+            }else if (nasumicanBroj > 90){
+                return nasumicanBroj + " - veliki";
+            }else {
+                return nasumicanBroj + " - srednji";
+            }
+        }
+       console.log(randomNumber());
+
+       
+    </script>
+    
+</body>
+</html>

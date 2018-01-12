@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Šesti zadatak</title>
+</head>
+<body>
+<script type="text/javascript">
+    var operacije={
+      "1+1":2,
+      "2-1":1,
+      "15%3":0,
+      "true&&true":true,
+      "true||false":true,
+      "false||true":true,
+      "false===false":true,
+      "1<6":true,
+      "-3+7":4
+      // "":"",
+    };
+    var tacnih=0,
+        pogresnih=0,
+        ukupno=0;
+    for(var kljuc in operacije){
+        ++ukupno;
+        try{
+            var rezultat=eval(kljuc);
+            if(rezultat===operacije[kljuc]){
+                console.log("%c"+kljuc+' = '+operacije[kljuc], 'background: green; color: #fff;padding:3px 5px;');
+                ++tacnih;
+            }else{
+                console.log("%c"+kljuc+' = '+operacije[kljuc], 'background: red; color: #fff;padding:3px 5px;');
+                ++pogresnih;
+            }
+        }catch (error){
+            ++pogresnih;
+            console.error("%c Greška u primeru: "+kljuc+"\n", 'background: red; color: #fff');// +error.message
+        }
+    }
+
+    document.body.innerHTML="<h1>"+(tacnih==ukupno?"Savršeno!!!":("<pre>Tačnih:\t\t"+tacnih+ "\n\
+Pogrešnih:\t"+pogresnih+ "\n\
+Od ukupno:\t"+ukupno+ "</pre>"))+"</h1>";
+</script>
+</body>
+</html>

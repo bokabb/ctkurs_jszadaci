@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Napišite program koji vraća random broj između 0 i 100 i ako je broj paran ispisuje u konzoli "Broj je paran", a ako nije "Broj je neparan"
+
+        function randomNumber() {
+            var ranNum = Math.floor(Math.random() * 100);
+         
+                    if (ranNum !== 0 && ranNum % 2 == 0) {
+                        return ranNum + " - Broj je paran";
+
+                    } else {
+                        return ranNum + " - Broj je neparan";
+                    } 
+                }
+   
+        console.log(randomNumber());
+
+    </script>
+
+</body>
+
+</html>

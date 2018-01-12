@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While petlja</title>
+</head>
+
+<body>
+    <div id="parni-brojevi"></div>
+
+    <script>
+        //Napišite pomoću while petlje sve parne brojeve manje od 100 deljive sa 2 ili 7
+
+        var i = 0;
+        while (i < 100) {
+            if (i !== 0 && i % 2 == 0 && i % 2 == 0 && i !== 0 && i % 2 == 0 && i % 7 == 0) {
+                document.getElementById("parni-brojevi").innerHTML += i + "<br>";
+            }
+            i++
+        }
+
+    </script>
+
+
+</body>
+
+</html>

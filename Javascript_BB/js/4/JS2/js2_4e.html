@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brojevi koji pocinju na 2,4,5</title>
+</head>
+
+<body>
+    
+    <script>
+
+        ////Napišite pomoću for petlje sve brojeve koji počinju sa 2, 4 ili 5
+
+
+         function pocetniBrojevi(from, to, start) {
+            var brojevi = [];
+            for (from; from <= to; from++) {
+                var broj = from.toString();
+                if (broj.charAt(0) == start) {
+                    brojevi.push(broj);
+                }
+            }
+            return console.log(brojevi);
+        }
+          pocetniBrojevi(20, 100, 2);
+          pocetniBrojevi(20, 100, 4);
+          pocetniBrojevi(20, 100, 5); 
+
+
+
+    </script>
+
+
+</body>
+
+</html>

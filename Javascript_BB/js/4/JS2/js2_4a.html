@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neparni brojevi izmedju 0 i 100 deljivi sa 7</title>
+</head>
+
+<body>
+    <div id="neparni-brojevi"></div>
+    <script>
+        //Napišite pomoću for petlje sve neparne brojeve između 0 i 100 deljive sa 7
+
+      
+
+            for (var i = 0; i <= 100; i++) {
+                if (i !== 0 && i % 2 !== 0 && i % 7 == 0) {
+                    document.getElementById("neparni-brojevi").innerHTML += i + "<br>";
+                    //console.log(i);
+                }
+            }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="interval"></div>
+    <div id="tajmerOutput"></div>
+    <script>
+
+        
+        
+        var uSirina = window.innerWidth;
+            uVisina = window.innerHeight;
+            pageX = window.pageXOffset;
+            pageY = window.pageYOffset;
+            skrinX = window.screenX;
+            skrinY = window.screenY;
+        var alarm = "Pazi!!!";
+            potvrda = "Da li si siguran?";
+            pitanje = "Koliko imaš godina?";
+
+        var nekoVreme = document.getElementById('interval');
+            period = "Svake 2 sekunde <br>";
+            time =  document.getElementById('tajmerOutput');
+            sekunde = 10;
+            prZ = "prezime";
+            sIme = "Petrović";
+        
+
+        console.log(uSirina,uVisina, pageX, pageY,  skrinX, skrinY);
+        window.alert(alarm);
+        window.confirm(potvrda);
+        window.prompt(pitanje);
+        setInterval(function () {
+            nekoVreme.innerHTML += period;
+        }, 2000);
+        time.innerHTML = sekunde;
+        localStorage.setItem(prZ, sIme);
+
+
+    </script>
+
+</body>
+
+</html>

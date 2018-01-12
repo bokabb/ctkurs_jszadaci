@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Padajuci meni</title>
+    <style >
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        body {
+            background:url("mayanpyramid.jpg") no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+
+        #glavni-meni {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        #nav-meni-block {
+            width: 100%;
+            height: 60px;
+            float: left;
+            margin-top: 10px;
+
+
+        }
+
+        #meni,
+        #meni ul {
+            padding: 0;
+            margin-top: 0 !important;
+            float: left;
+         
+        }
+
+        #meni li {
+            float: left;
+            display: block;
+            min-width: 150px;
+            border:  1px solid #4d4d4d;
+            background: #59afe3;
+        }
+
+        #meni li a {
+            padding: 5px 20px;
+            text-align: center;
+            display: block;
+            line-height: 20px;
+            color: #4d4d4d;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+
+        #meni li ul {
+            display: none;
+        }
+
+        #meni>li {
+            position: relative;
+        }
+
+        #meni li:hover ul {
+            display: block;
+            position: absolute;
+            top: 31px;
+            left: 0;
+        }
+
+        #meni li a:hover {
+            background: #ccc;
+        }
+        .container{max-width:960px;margin:auto; }
+
+
+        #menu-icon {
+            width:40px;
+            width:40px;
+            cursor:pointer;
+            background:white;
+            padding:3px;
+            display:none;
+        }
+
+        #menu-icon div {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+
+
+        }
+
+        @media screen and (max-width:760px){
+            #nav-meni-block .container {
+                display:none;
+            }
+
+            #menu-icon {
+                display:block;
+            }
+
+            #meni li {
+                float: left;
+                display: block;
+                width: 100%;
+                border:  1px solid #4d4d4d;
+                background: #59afe3;
+            }
+
+            #meni li:hover ul {
+                display: block;
+                position: relative;
+                top:0;
+            }
+
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- ========  Padajuci responsive meni sa dva nivoa dubine  ======== -->
+
+    <div id="glavni-meni">
+        <div id="nav-meni-block">
+
+            <div id="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="container">
+                <ul id="meni">
+                    <li>
+                        <a href='/'>Početna</a>
+                    </li>
+                    <li>
+                        <a href='/o_nama.html'>O nama</a>
+                    </li>
+                    <li>
+                        <a href='/naslovna.html'>Naslovna</a>
+                    </li>
+                    <li>
+                        <a href='/članci.html'>Članci</a>
+                        <ul>
+                            <li>
+                                <a href='/uvod.html'>Uvod</a>
+                            </li>
+                            <li>
+                                <a href='/istorija.html'>Istorija</a>
+                            </li>
+                            <li>
+                                <a href='/maje_inke.html'>Maje i Inke</a>
+                            </li>
+                            <li>
+                                <a href='/peru'>Peru</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href='/kontakt.html'>Kontakt</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        document.getElementById("menu-icon").addEventListener("click", function () {
+            if(document.querySelector("#nav-meni-block .container").style.display == "block"){
+                document.querySelector("#nav-meni-block .container").style.display = "none";
+            }else{
+                document.querySelector("#nav-meni-block .container").style.display = "block";
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

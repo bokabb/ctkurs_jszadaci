@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>insertAdjacentHTML</title>
+</head>
+<body>
+        <div id="Zdravo1"></div>
+        <h1 id='text'>Zdravo</h1>
+        <input type="text" name="text" id="Zdravo2">
+
+
+    <script>
+        alert("Zdravo!");
+        console.log("Zdravo!");
+        document.getElementById("Zdravo1").innerHTML = "Zdravo!";
+        document.getElementById("Zdravo2").value = "Zdravo!";
+        var h1 = document.getElementById("text").textContent = "Zdravo!";
+        h1.textContent = "Zdravo!";
+
+        var pozdrav = document.getElementById("text");
+        pozdrav.insertAdjacentHTML("beforebegin",h1);
+        //pozdrav.insertAdjacentHTML("afterbegin",h1);
+        //pozdrav.insertAdjacentHTML("beforeend",h1);
+        // pozdrav.insertAdjacentHTML("afterend",h1);
+       
+        
+        
+    </script>
+</body>
+</html>
