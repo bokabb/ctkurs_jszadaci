@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While petlja</title>
+</head>
+
+<body>
+    <div id="neparni-brojevi"></div>
+
+    <script>
+        //Napišite pomoću while petlje sve neparne brojeve manje od 1000 u kojima su prva i druga cifra iste
+
+        var minNum = 0;
+        var maxNum = 1000;
+        var arrayNums = [];
+        while (minNum < 1000) {
+            var stringMinNum = minNum.toString();
+            if(minNum % 2 == 1 && (stringMinNum.charAt(0) === stringMinNum.charAt(1))) {
+                arrayNums.push(minNum);
+            }
+            minNum++;    
+        }
+        console.log(arrayNums);
+         
+    </script>
+
+
+</body>
+
+</html>
