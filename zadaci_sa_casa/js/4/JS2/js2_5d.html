@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While petlja</title>
+</head>
+
+<body>
+
+    <script>
+        //Ispisujte while petljom brojeve koji su deljivi sa 11, 13 ili 19 sve dok ne dođete do broja koji je deljiv sa sva 3
+
+        var minNum = 0;
+        var maxNum = 10000;
+        var arrayNums = [];
+        while (minNum <= 10000) {
+
+            if (minNum % 11 == 0 && minNum !== 0) {
+
+                if (minNum % 13 == 0 && minNum !== 0) {
+
+                    if (minNum % 19 == 0 && minNum !== 0) {
+                        arrayNums.push(minNum);
+                    }
+                }
+            }
+            minNum++;
+        }
+        console.log(arrayNums);
+
+
+    </script>
+
+
+</body>
+
+</html>
