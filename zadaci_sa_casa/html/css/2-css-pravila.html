@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        html{ box-sizing:border-box; }
+        *, *:before, *:after{ box-sizing:inherit; }
+        body{max-width:1100px;}
+        body>div{ width:150px; height:150px; margin:30px; border:solid black 2px; float:left; text-align:center;}
+        #vertikalno-centriranje, body>#div11{
+            display:table;
+            border: none;
+        }
+        div div{margin:5px;border:solid red 2px;width:136px;height:136px;}
+
+        #div1{
+           border: 5px solid red;
+        }
+        #div2{
+            border: 2px dashed blue;
+            font-weight: bold;
+        }
+        #div3{
+            border: 6px solid blue;
+        }
+        #div4{
+            border: 3px dotted rgb(23, 255, 23);
+        }
+        #div5{
+            border-style: dotted dashed;
+            border-width: thick; /*ili npr. border: 5px black; */
+            font-size:28px;
+        }
+        #div6{
+            text-transform: uppercase;
+            text-decoration: underline;
+            border: 4px dotted;
+            border-color: red green;
+        }
+        #div7{
+            border: 4px dotted;
+            border-color: blue black yellow;
+        }
+        #div8{
+            border: 4px dotted;
+            border-color: red green blue black;
+        }
+        #div9{
+            border: 20px solid;
+            border-color: red green blue black;
+            background: yellow;
+           
+        }
+        #div10{
+            border-radius: 100%;
+            border: 20px solid;
+            border-color: red green blue black;
+            background: yellow;
+
+         
+        }
+        #div11 p{
+            border-radius: 100%;
+            border: 20px solid;
+            border-color: red green blue black; 
+            text-decoration: line-through;
+            display: table-cell;
+            vertical-align:middle;
+        }
+       #div12>div{  
+           height: 100px;
+           width: 100px;
+           margin: 25px auto;
+        }
+      
+        #div13{
+            border: 10px solid #e91f4e;
+            background: yellow;
+            position: relative;
+        }
+        #div13>div{
+            height: 100px;
+            width: 100px;
+            border: 5px solid blue;
+            background: red; 
+            margin: 16px;
+            position: absolute;
+        }
+        #div14{
+            border: 9px solid #e91f4e;
+            outline: 5px solid green;
+            background: yellow;
+            position: relative;
+        }
+        #div14>div{
+            border: 5px solid blue;
+            height: 100px;
+            width: 100px;
+            background: red;
+            outline: 5px solid green;
+            margin: 16px;
+            position: absolute;
+        }
+      
+        #div15>div{
+            position: relative;
+            top: 20px;  
+        }
+        #div16{
+            position: relative;
+            top: 30px;
+            left: 30px; 
+            z-index:2;
+        }
+        #div16>div{
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+            position: absolute;
+        }
+        #div17{
+            top: 0px;
+            left: 0px; 
+            z-index:2;
+            position: relative;
+            text-align: right; 
+        }
+        #div17>div{
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+            position: absolute;
+        }
+        #div18>div{
+            overflow: auto;
+        }
+        #div19{
+            overflow: auto;
+            
+        }
+        #div19>div{
+           width: 970px;
+           height: 100px;
+        }
+        #div20{
+            background: red;
+            z-index: 0;
+            position: relative;
+        }
+        #div20>div{
+            width: 80px;
+            height: 50px;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+
+        }
+        #div20>#prvi{
+            background: blue;
+            top:50px;
+            left:60px;
+            z-index: 2;
+            position: absolute;
+            border: none;
+        
+        }
+        #div20>#drugi{
+            background: green;
+            top:80px;
+            left: 10px;
+            z-index: 2;
+            position: absolute;
+            border: none;
+        
+        }
+        #div20>#treci{
+            background: yellow;
+            top:10px;
+            left: 0px;
+            z-index: 2;
+            position: absolute;
+            border: none;
+        
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="div1">Jedan</div>
+<div id="div2">Dva</div>
+<div id="div3"><em>Tri</em> </div>
+<div id="div4"><strong><em>Četiri</em></strong></div>
+<div id="div5">Pet</div>
+<div id="div6">Šest</div>
+<div id="div7">Sedam</div>
+<div id="div8">Osam</div>
+<div id="div9">Devet</div>
+<div id="div10">Deset</div>
+<div id="div11">
+    <div id="vertikalno-centriranje">
+    <p>11</p>
+</div>
+</div>
+<div id="div12"><div>12</div></div>
+<div id="div13"><div>13</div></div>
+<div id="div14"><div>14</div></div>
+<div id="div15"><div>15</div></div>
+<div id="div16"><div>16</div></div>
+<div id="div17"><div>17</div></div>
+<div id="div18"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequatur dolorum explicabo in, laudantium, optio pariatur quam quod ratione sapiente totam, vero voluptatibus! Eos esse id rem! A id, odio.</div></div>
+<div id="div19"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum delectus, deserunt dolor doloremque eius, explicabo id illo ipsa itaque laborum molestiae officia quidem, reprehenderit similique sit temporibus totam ullam.</div></div>
+<div id="div20">
+    <div id="prvi">Jedan</div>
+    <div id="drugi">Dva</div>
+    <div id="treci">Tri</div>
+</div>
+</body>
+</html>
