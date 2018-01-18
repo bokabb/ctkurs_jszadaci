@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Napišite 3 for petlje ugnježđene jednu u drugoj prva neka ispisuje parne brojeve, druga neka ispisuje neparne brojeve, treća neka ispisuje 
+       // brojeve deljive sa 3. Kad se desi da su sva 3 broja ista, neka petlja ispiše: "Nađen broj X u sve 3 for petlje".
+
+           var broj = 15; 
+               parniBroj = 0;
+               neparniBroj = 0;
+               brojDeljivSaTri = 0;
+        for (parniBroj = 0; parniBroj < broj; parniBroj++) {
+            if (parniBroj % 2 == 0 && parniBroj  !== 0 ) {
+                console.log("Parni broj je:", parniBroj);
+                for (neparniBroj = 0; neparniBroj < broj; neparniBroj++) {
+                    if (neparniBroj % 2 !== 0 && neparniBroj  !== 0) {
+                        console.log("Neparni broj je:", neparniBroj);
+                        for (brojDeljivSaTri = 0; brojDeljivSaTri < broj; brojDeljivSaTri++) {
+                            if (brojDeljivSaTri % 3 == 0 && brojDeljivSaTri !== 0) {
+                                console.log("Broj je deljiv sa tri: ", brojDeljivSaTri);
+                                if (parniBroj == neparniBroj && neparniBroj==brojDeljivSaTri) {
+                                    console.log("Nađen broj X u sve 3 for petlje");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
