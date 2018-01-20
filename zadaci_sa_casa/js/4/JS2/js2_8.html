@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random broj</title>
+</head>
+
+<body>
+    <script>
+        /*Napišite funkciju koja:
+           - vraća random neparan broj manji od 1000
+           - vraća random broj između 99 i 999
+           - vraća random desetocifreni broj */
+
+      
+        function neparniBroj() {
+            var ranBroj = Math.floor(Math.random() * 1000);
+            if (ranBroj % 2 != 0 && ranBroj != 0) {
+                return console.log(ranBroj);
+            } else {
+                console.log(ranBroj+1);
+
+            }
+
+        }
+        neparniBroj();
+
+        function ranNum(from, to) {
+            return Math.floor(Math.random() * (to + 1 - from) + from);
+        }
+
+        console.log(ranNum(99, 999));
+
+    // 1e10 --> 1.000.000.000; 1e9 --> 100.000.000
+
+        function ranNumDesetCifara(from,to) {     
+           return Math.floor(Math.random() * (to - from)) + from;  
+        }
+        console.log(ranNumDesetCifara(1e9, 1e10));
+
+
+    </script>
+
+</body>
+
+</html>

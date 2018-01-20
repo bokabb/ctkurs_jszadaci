@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Domaći funkcije</title>
+</head>
+
+<body>
+    <script>
+
+        /*  Domaći funkcije:
+        
+        - zadnjiKarakteri("neki string",3); // treba da vrati zadnja 3 karaktera (u ovom slučaju "ing")
+        
+        - prviKarakteri("neki string",3); // treba da vrati prva 3 karaktera (u ovom slučaju "nek")
+        
+        - karakteriOdDo("Neki string",2,7); // treba da vrati slova od 2. do 7. uključujući i 2. i 7. slovo po redu (u ovom slučaju "eki st");
+        
+        - prvoPojavljivanje("a","JavaScript");// treba da vrati poziciju 1. pojavljivanja slova u reči, a 0 ako slovo u reči ne postoji ( u ovom slučaju 2)
+        
+        - brojPojavljivanje("a","JavaScript");// treba da vrati broj pojavljivanja slova u reči ( u ovom slučaju 2, jer slovo "a" se 2x pominje u reči JavaScript)
+        
+        - brojPojavljivanjeZanemariVelicinu("a","JavaScript");// isto kao brojPojavljivanja samo što ne obraća pažnju na veličinu slova
+        
+        - brojSlovaUStringu("Kako si? 2 i 2 su 5");// treba da izbroji slova u stringu (bez razmaka, brojeva i znakova interpunkcije) u ovom slučaju treba da vrati 9
+        
+        - zameni("a","f","JavaScript");// Zamenite sva pojavljivanja a sa f u reči JavaScript - u ovom slučaju funkcija treba da vrati JfvfScript - ovo uradite bez regularnih izraza
+        
+        - Napravite funkciju koja će da briše razmake sa početka i kraja, ali ne i iz sredine stringa
+
+        */
+
+
+        //Zadnji karakteri
+
+        zadnjiKarakteri("odbojka", 3);
+        function zadnjiKarakteri(rec, brojKaraktera) {
+            return rec.substr(rec.length - brojKaraktera);
+        }
+        console.log("Poslednja 3 karaktera su: " + zadnjiKarakteri("odbojka", 3));//jka
+
+        //Prvi karakteri
+
+        prviKarakteri("košarka", 3);
+        function prviKarakteri(rec, brojKaraktera) {
+
+            return rec.substr(0, brojKaraktera);
+        }
+        console.log("Prva 3 karaktera: " + prviKarakteri("košarka", 3));//koš
+
+        //KarakteriOdDo
+
+        karakteriOdDo("frontend development", 2, 7);
+
+        function karakteriOdDo(rec, pocetak, kraj) {
+
+            pocetak = pocetak - 1;
+            kraj = kraj - 1;
+
+            return rec.substr(pocetak, kraj);
+        }
+        console.log("karakteri od 2 do 7: " + karakteriOdDo("frontend development", 2, 7));//ronten
+
+        //Prvo pojavljivanje
+
+        prvoPojavljivanje("a", "Beograd");
+
+        function prvoPojavljivanje(karakter, rec) {
+
+            return rec.indexOf(karakter) + 1;
+
+        }
+        console.log(prvoPojavljivanje("a", "Beograd"));//6
+
+
+        //Broj pojavljivanja slova u reči
+
+        brojPojavljivanje("a", "paradigma");
+        function brojPojavljivanje(karakter, rec) {
+
+            var ponavljanje = 0;
+
+            for (var i = 0; i <= rec.length; i++) {
+                if (rec.substr(i, 1) == karakter) {
+                    ponavljanje++;
+                }
+            }
+
+            return ponavljanje;
+        }
+
+        console.log(brojPojavljivanje("a", "paradigma"));//3x
+
+
+        //Broj pojavljivanja slova u reči, zanemari veličinu
+
+        function brojPojavljivanjeZanemariVelicinu(karakter, rec) {
+
+            var ponavljanje = 0;
+            rec=rec.toLowerCase();
+            for (var i = 0; i <= rec.length; i++) {
+                if (rec.substr(i, 1) == karakter) {
+                    ponavljanje++;
+                }
+            }
+
+            return ponavljanje;
+        }
+
+        console.log(brojPojavljivanjeZanemariVelicinu("k", "Karakteristika"));//3x
+
+        //Broj slova u stringu
+
+        function brojSlovaUStringu(text) {
+            var novaRec = 0;
+            text=text.toLowerCase();  
+            for (var i = 0; i <= text.length; i++) {
+                var brojSlova=text.substr(i,1);
+                if (brojSlova=="k"||
+                    brojSlova=="a"||
+                    brojSlova=="o"||
+                    brojSlova=="s"||
+                    brojSlova=="i"||
+                    brojSlova=="u" 
+                ){
+                    novaRec ++;
+                }
+
+            }
+            return novaRec;
+        }
+  
+        console.log("Broj slova u stringu je:", brojSlovaUStringu("Kako si? 2 i 2 su 5"));
+        //Broj slova u stringu je: 9
+
+
+
+        //Zameni a sa f:
+        zameni("a", "f", "analogija");
+        function zameni(karakter1, karakter2, rec) {
+
+            var novaRec = '';
+
+            for (var i = 0; i <= rec.length; i++) {
+                if (rec.substr(i, 1) == karakter1) {
+                    novaRec += karakter2;
+                } else {
+                    novaRec += rec.substr(i, 1);
+                }
+            }
+            return novaRec;
+        }
+        console.log(zameni("a", "f", "analogija"));//fnflogijf
+
+        // Izbriši razmake
+        
+        function izbrisiRazmakeSaPocetkaKraja(text) { 
+            return text.trim();
+        }
+        console.log(izbrisiRazmakeSaPocetkaKraja(" mislim da sam svakim danom sve bolja u programiranju "));
+
+        // ili
+
+       function izbrisiRazmake() {
+
+            return "\"" + "ovo je tekst sa razmacima" + "\"";
+
+        }
+
+        console.log(izbrisiRazmake(" ovo je tekst sa razmacima "));
+
+   
+
+
+
+    </script>
+
+</body>
+
+</html>
