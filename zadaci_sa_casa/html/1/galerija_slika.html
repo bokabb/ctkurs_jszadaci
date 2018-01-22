@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galerija slika</title>
+    <style>
+        *{ box-sizing:border-box; font-family:"Arial Narrow"; }
+        #slikice img{
+            height: 50px;
+        }
+        #slide-blok img{
+            height: 500px;
+        }
+        #levo, #desno{
+           width: 70px;
+           height: 40px;
+           
+        }
+
+        .centralni-blok {
+            max-width: 1200px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .blok100 {
+            width: 100%;
+            
+        }
+        .blok80{
+            width: 80%;
+            
+
+        }
+
+        .blok10 {
+            width: 10%;
+        
+        }
+        .blok10, .blok80, .blok100{
+            float:left;
+            padding:10px;
+            text-align:center;
+        }
+        .responsive-img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="centralni-blok">
+        <div class="blok100">
+            <div class="blok10">
+                <button id="levo" onclick="prevImg()">Left
+            </div>
+            <div class="blok80" id="slide-blok"></div>
+            <div class="blok10">
+                <button id="desno" onclick="nextImg()">Right
+            </div>
+        </div>
+        <div class="blok100" id="slikice">
+
+            <div class="blok10">
+                <img src="img/door.jpg" alt="plava vrata" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/spoon.jpg" alt="kasika" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/coffee-cake.jpg" alt="kafa i kolac" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/blueberries.jpg" alt="borovnice" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/coffee-beans.jpg" alt="kafa" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/panetone.jpg" alt="panetone" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/nougat.jpg" alt="nugat" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/nuts.jpg" alt="lesnici" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/cake.jpg" alt="torta" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/berries.jpg" alt="bobicasto voce" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/anise.jpg" alt="anis" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/paella.jpg" alt="paelja" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/macarons.jpg" alt="makaroni" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/ice-chocolate.jpg" alt="sladoled cokolada" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/jabuka.jpg" alt="jabuka" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/applered.jpg" alt="crvena jabuka" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/spagete.jpg" alt="spagete" class="responsive-img">
+            </div>
+            <div class="blok10">
+                <img src="img/cinnamon.jpg" alt="cimet" class="responsive-img">
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+    
+    var img = document.querySelectorAll(".blok10 img");
+    img.forEach(function(slike){
+        slike.addEventListener("click", function (e) {
+            document.getElementById("slide-blok").innerHTML = "<img src='"+e.target.src+"' class='responsive-img'>";
+        })
+    })
+    
+    function nextImg() {
+        
+        var currentImg = document.querySelector("#slide-blok img");
+        var src = currentImg.src;
+
+
+        var img = document.querySelectorAll(".blok10 img");
+        var niz = [];
+        var next = "";
+
+        img.forEach(function (slike) {
+            niz.push(slike.src);
+        })
+
+        var current = niz.indexOf(src);
+        next = niz[current + 1];
+
+        if (!next) {
+            next = niz[0];  
+        }
+
+
+
+        document.getElementById("slide-blok").innerHTML = "<img src='"+next+"' class='responsive-img'>";
+    }
+    
+    
+    function prevImg() {
+    
+    
+    var currentImg = document.querySelector("#slide-blok img");
+    var src = currentImg.src;
+
+    var img = document.querySelectorAll(".blok10 img");
+    var niz = [];
+    var next = "";
+
+    img.forEach(function (slike) {
+       niz.push(slike.src);
+    })
+    
+    var current = niz.indexOf(src);
+    next = niz[current - 1];
+
+    if(!next){
+        next = niz[niz.length - 1];
+    }
+    document.getElementById("slide-blok").innerHTML = "<img src='"+next+"' class='responsive-img'>";
+}
+    
+    
+    </script>
+
+</body>
+
+</html>
