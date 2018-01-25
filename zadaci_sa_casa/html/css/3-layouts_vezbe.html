@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layouts</title>
+    <style type="text/css">
+        html {box-sizing: border-box;}
+        *, *:before, *:after {box-sizing: inherit;}
+        .container{width:600px;height:350px; overflow:auto; display:block; float:left;border:solid deeppink 1px; background:brown;margin:20px;}
+        header{ background:red;color:#fff;border:solid #fff 2px;height:50px;}
+        footer{ background:indianred;color:#fff;border:solid #fff 2px;}
+        main{background:blue;border:solid #fff 2px;}
+        article{ background:lime;border:solid black 1px;}
+        .first{background:orange;}
+        .second{background:green;}
+        .third{background:lightcoral;}
+        .fourth{background:yellow;}
+        .fifth{background:lightblue;}
+        .sixth{background:olive;}
+        header,footer,.first,.second,.third,.fourth,.fifth,.sixth{padding:5px;}
+
+        #container1 header{height:60px; width: 100%;}
+        #container1 .first{width: 33.333%; height: 100px; float: left;}
+        #container1 .second{width: 33.333%; height: 100px; float: left;}
+        #container1 .third{width: 33.333%; height: 100px; float: left;}
+        #container1 .fourth{width: 100%; height: 50px; clear: both;}
+        #container1 .fifth{width: 100%; height: 50px;clear: both;}
+        #container1 .sixth{width: 100%; height: 40px;clear: both; }
+        #container1 footer{width: 100%; height:40px;clear: both; }
+  
+    
+
+
+        #container2 .first{width: 33.333%; height: 130px; float: left;}
+        #container2 .second{width: 33.333%; height: 130px; float: left;}
+        #container2 .third{width: 33.333%; height: 130px; float: left;}
+        #container2 .fourth{width: 33.333%; height: 130px; float: left;}
+        #container2 .fifth{width: 33.333%; height: 130px; float: left;}
+        #container2 .sixth{width: 33.333%; height: 130px; float: left;}
+        #container2 footer{width:100%; height:50px; float: left;}
+        
+     
+        #container3 .first{width: 33.333%;height: 90px;float: left;}
+        #container3 .second{width: 33.333%;height: 90px;float: left;}
+        #container3 .third{width: 33.333%;height: 90px;float: left;}
+        #container3 .fourth{width: 50%;height: 80px;float: left;}
+        #container3 .fifth{width: 50%;height: 80px;float: left;}
+        #container3 .sixth{width: 100%;height: 70px;float: left;}
+        #container3 footer{width:100%;height:50px;float: left;}
+
+       
+        #container4 .first{width: 16.666%;height: 80px;float: left;}
+        #container4 .second{width: 16%;height: 110px;float: left;}
+        #container4 .third{width: 16.666%;height: 80px;float: left;}
+        #container4 .fourth{width: 16.666%;height: 80px;float: left;}
+        #container4 .fifth{width: 18%;height: 80px;float: left;}
+        #container4 .sixth{width: 16%;height: 90px;float: left;}
+        #container4 footer{width:100%;height:50px;float: left;}
+
+       
+
+      
+        #container5 .first{width: 16.666%;height: 200px;float: left;}
+        #container5 .second{width: 16.666%;height: 200px;float: left;}
+        #container5 .third{width: 16%;height: 200px;float: left;}
+        #container5 .fourth{width: 16.666%;height: 200px;float: left;}
+        #container5 .fifth{width: 18%;height: 200px;float: left;}
+        #container5 .sixth{width: 16%;height: 200px;float: left;}
+        #container5 footer{width:100%;height:50px;float: left;}
+
+        #container6 {position: relative;}
+        #container6 header{position: absolute;top:260px;width:100%}
+        #container6 main{position: absolute; margin-top: 60px;}
+     
+        #container6 .first{background:olive;width: 16.666%;height: 200px;float: left;}
+        #container6 .second{background:orange;width: 16.666%;height: 200px;float: left;}
+        #container6 .third{background:green;width: 16%;height: 200px;float: left;}
+        #container6 .fourth{width: 16.666%;height: 200px;float: left;}
+        #container6 .fifth{background:lightcoral;width: 16%;height: 200px;float: left;}
+        #container6 .sixth{background:lightblue;width: 18%;height: 200px;float: left;}
+        #container6 footer{position: absolute; width:100%;height: 50px;clear: both}
+        
+        #container7 .first{width: 50%;height: 60px;float: left;}
+        #container7 .second{width: 50%;height: 60px;float: left;}
+        #container7 .third{width: 50%;height: 60px;float: left;}
+        #container7 .fourth{width: 50%;height: 60px;float: left;}
+        #container7 .fifth{width: 100%;height: 60px;float: left;}
+        #container7 .sixth{width: 100%;height: 60px;float: left;}
+        #container7 footer{height: 50px;clear: both;}
+        
+        #container8 .first{width: 25%;height: 80px;float: left;}
+        #container8 .second{width: 25%;height: 80px;float: left;}
+        #container8 .third{width: 25%;height: 80px;float: left;}
+        #container8 .fourth{width: 25%;height: 80px;float: left;}
+        #container8 .fifth{width: 50%;height: 80px;float: left;}
+        #container8 .sixth{width: 50%;height: 80px;float: left;}
+        #container8 footer{clear: both;height: 50px;}
+        
+        #container9 .first{width: 33.333%;height: 80px;float: left;}
+        #container9 .second{width: 33.333%;height: 80px;float: left;}
+        #container9 .third{width: 33.333%;height: 80px;float: left;}
+        #container9 .fourth{width: 50%;height: 80px;float: left;}
+        #container9 .fifth{width: 25%;height: 80px;float: left;}
+        #container9 .sixth{width: 25%;height: 80px;float: left;}
+        #container9 footer{height: 50px;clear: both;}
+
+        #container10 .first{width: 33.333%;height: 80px;float: left;}
+        #container10 .second{width: 33.333%;height: 80px;float: left;}
+        #container10 .third{width: 33.333%;height: 80px;float: left;}
+        #container10 .fourth{width: 25%;height: 80px;float: left;}
+        #container10 .fifth{width: 50%;height: 80px;float: left;}
+        #container10 .sixth{width: 25%;height: 80px;float: left;}
+        #container10 footer{height: 50px;clear: both;}
+
+        #container11 .first{width: 20%;height: 80px;float: left;}
+        #container11 .second{width: 60%;height: 80px;float: left;}
+        #container11 .third{width: 20%;height: 80px;float: left;}
+        #container11 .fourth{width: 35%;height: 80px;float: left;}
+        #container11 .fifth{width: 30%;height: 80px;float: left;}
+        #container11 .sixth{width: 35%;height: 80px;float: left;}
+        #container11 footer{height: 50px;clear: both;}
+
+        #container12 .first{width: 30%;height: 80px;float: left;}
+        #container12 .second{width: 70%;height: 80px;float: left;}
+        #container12 .third{width: 70%;height: 80px;float: left;}
+        #container12 .fourth{width: 30%;height: 80px;float: left;}
+        #container12 .fifth{width: 30%;height: 80px;float: left;}
+        #container12 .sixth{width: 70%;height: 80px;float: left;}
+        #container12 footer{height: 50px;clear: both;}
+
+        #container13 .first{width: 70%;height: 50px;float: left;}
+        #container13 .second{width: 70%;height: 50px;float: left;}
+        #container13 .third{width: 70%;height: 50px;float: right;}
+        #container13 .fourth{width: 70%;height: 50px;float: right;}
+        #container13 .fifth{width: 50%;height: 50px;float: left;}
+        #container13 .sixth{width: 50%;height: 50px;float: left;}
+        #container13 footer{height: 50px;clear: both;}
+
+        #container14 .first{height: 30px;float: left;}
+        #container14 .second{margin-left: 5px;width: 45%;height: 30px;float: left;}
+        #container14 .third{width: 31%;height: 30px;clear: both;}
+        #container14 .fourth{width: 45%;height: 30px;float: left;margin-left: 3px;}
+        #container14 .fifth{width: 40%;height: 35px;clear: both;}
+        #container14 .sixth{height: 35px;margin-left: 5px;float: left;}
+        #container14 footer{height: 50px;clear: both;}
+        #container14 main{position: relative; height: 100px}  
+
+        #container15 .first{width: 40%;height: 45px;float: left;}
+        #container15 .second{width:40%;height: 45px;clear: both;}
+        #container15 .third{width: 40%;height: 45px;clear: both;}
+        #container15 .fourth{width: 50%;height: 45px;float: left;}
+        #container15 .fifth{width: 50%;height: 45px;clear: both;}
+        #container15 .sixth{width: 100%;height: 45px;float: left;}
+        #container15 footer{width: 19%;height: 50px;position: absolute; margin-top: -54px;margin-left:300px;}
+        #container15 footer{clear: both}
+        #container15 main{ height: 0px;position: relative;} 
+        #container15 header{width: 50%;} 
+        container15 {position: relative}
+
+
+        #container16 .first, .second,.third, .fourth,.fifth {width: 20%;height: 100px;float: left;}
+        #container16 .sixth{width: 100%;height: 130px;float: left;}
+        #container16 footer{height: 50px;clear: both;}
+
+        #container17 header{width: 100%;} 
+        #container17 .first{width: 33%;height: 50px;float: left;}
+        #container17 .second{width:33%;height: 50px;clear: both;}
+        #container17 .third{width: 33%;height: 50px;float: left;}
+        #container17 .fourth{width: 47%;height: 50px;margin-left: 33%;clear: both;}
+        #container17 .fifth{width: 50%;height: 50px;clear:both;}
+        #container17 .sixth{width: 100%;height: 50px;float: left;}
+        #container17 footer{width: 100%;height: 50px;clear: both;}
+
+    
+        #container18 header{width: 100%;} 
+        #container18 .first{width: 100%;;height: 80px;}
+        #container18 .second{width:50%;height: 80px;}
+        #container18 .third{width: 25%;height: 80px;}
+        #container18 .fourth{width: 25%;height: 80px;}
+        #container18 .fifth{width: 100%;height: 80px;}
+        #container18 .sixth{width: 100%;height: 80px;float: left;}
+        #container18 footer{width: 100%;clear: both;}
+       
+        #container19 .first {background:green;width: 33.333%;height: 80px;float: left;}
+        #container19 .second {background:lightcoral;width: 33.333%;height: 80px;float: left;}
+        #container19 .third {background:orange;width: 33.333%;height: 80px;float: left;}
+        #container19 .fourth {background:lightblue;width: 50%;height: 80px;float: left;}
+        #container19 .fifth {background:yellow;width: 50%;height: 80px;float: left;}
+        #container19 .sixth{width: 100%;height: 80px;float: left;}
+        #container19 footer{width: 100%;height: 50px;float: left;}
+     
+        #container20 .first,.second,.third{width:33.33%; height:80px;float:left;}
+        #container20 .fourth,.fifth{width:50%; height:80px;float:left; }
+        #container20 .sixth{ width:100%; height:80px;float:left;}
+        #container20 footer{width: 50%;height: 50px;clear: both;}
+        #container20 header{width:19%;height: 50px; margin-left:300px; margin-top:242px;position: absolute;}
+        
+
+    </style>
+</head>
+<body>
+<div class="container" id="container1">
+    <header>Header 1</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container2">
+    <header>Header 2</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container3">
+    <header>Header 3</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container4">
+    <header>Header 4</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container5">
+    <header>Header 5</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container6">
+    <header>Header 6</header>
+    <main>
+        <article class="first">sixth sixth sixth sixth sixth sixth sixth sixth</article>
+        <article class="second">first first first first first first</article>
+        <article class="third">second second second second second</article>
+        <article class="fourth">fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth">third third third third third</article>
+        <article class="sixth">fifth fifth fifth fifth fifth fifth fifth</article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container7">
+    <header>Header 7</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container8">
+    <header>Header 8</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container9">
+    <header>Header 9</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container10">
+    <header>Header 10</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container11">
+    <header>Header 11</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container12">
+    <header>Header 12</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container13">
+    <header>Header 13</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container14">
+    <header>Header 14</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container15">
+    <header>Header 15</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container16">
+    <header>Header 16</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second <br> second <br> second <br> second <br> <br> second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container17">
+    <header>Header 17</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container18">
+    <header>Header 18</header>
+    <main>
+        <article class="first">first first first first first first</article>
+        <article class="second">second second second second second</article>
+        <article class="third">third third third third third  </article>
+        <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+        <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+        <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container19">
+    <header>Header 19</header>
+    <main>
+            <article class="first">second second second second second</article>
+            <article class="second">third third third third third </article>
+            <article class="third">first first first first first first</article>
+            <article class="fourth">fifth fifth fifth fifth fifth fifth fifth  </article>
+            <article class="fifth"> fourth fourth fourth fourth fourth fourth </article>
+            <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+      
+    </main>
+    <footer>Footer</footer>
+</div>
+
+<div class="container" id="container20">
+    <header>Header 20</header>
+    <main>
+            <article class="first">first first first first first first</article>
+            <article class="second">second second second second second</article>
+            <article class="third">third third third third third  </article>
+            <article class="fourth"> fourth fourth fourth fourth fourth fourth </article>
+            <article class="fifth"> fifth fifth fifth fifth fifth fifth fifth </article>
+            <article class="sixth"> sixth sixth sixth sixth sixth sixth sixth sixth </article>
+    </main>
+    <footer>Footer</footer>
+</div>
+
+</body>
+</html>
